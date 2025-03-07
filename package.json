@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --fix",
+    "lint:css": "stylelint \"**/*.{css,scss}\" --fix",
     "format": "prettier --write .",
     "commit": "cz"
   },
@@ -31,6 +32,10 @@
     "eslint-config-prettier": "^10.0.2",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "stylelint": "^16.15.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-config-tailwindcss": "^1.0.0",
+    "stylelint-prettier": "^5.0.3",
     "tailwindcss": "^4.0.11",
     "typescript": "^5.8.2"
   },
