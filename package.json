@@ -55,5 +55,6 @@
     "*.{css,scss}": [
       "stylelint --fix"
     ]
-  }
+  },
+  "packageManager": "pnpm@10.6.1"
 }
