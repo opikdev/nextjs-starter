@@ -9,6 +9,7 @@
     "lint": "next lint --fix",
     "lint:css": "stylelint \"**/*.{css,scss}\" --fix",
     "format": "prettier --write .",
+    "prepare": "lefthook install",
     "commit": "cz"
   },
   "dependencies": {
@@ -30,6 +31,8 @@
     "eslint": "^9.21.0",
     "eslint-config-next": "15.2.1",
     "eslint-config-prettier": "^10.0.2",
+    "lefthook": "^1.11.2",
+    "lint-staged": "^15.4.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "stylelint": "^16.15.0",
@@ -43,5 +46,14 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix"
+    ]
   }
 }

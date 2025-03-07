@@ -1,0 +1,12 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      run: 'pnpm exec lint-staged'
+    typecheck:
+      run: 'pnpm exec tsc --noEmit'
+
+commit-msg:
+  commands:
+    commitlint:
+      run: 'pnpm exec commitlint --edit {1}'
